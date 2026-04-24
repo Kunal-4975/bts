@@ -1,0 +1,104 @@
+version: 2
+
+models:
+
+  # staging
+  - name: stg_orders
+    description: "Staged orders data from raw JSON"
+
+    columns:
+      - name: order_id
+        tests:
+          - not_null
+
+      - name: customer_id
+        tests:
+          - not_null
+
+      - name: order_updated_at
+        tests:
+          - not_null
+
+
+  - name: stg_customers
+    description: "Staged customers data"
+
+    columns:
+      - name: customer_id
+        tests:
+          - not_null
+
+      - name: region
+        tests:
+          - not_null
+
+
+  - name: stg_products
+    description: "Staged products data"
+
+    columns:
+      - name: product_id
+        tests:
+          - not_null
+
+      - name: product_name
+        tests:
+          - not_null
+
+
+  # dimensions
+
+  - name: dim_customer
+    description: "Customer dimension table"
+
+    columns:
+      - name: customer_id
+        tests:
+          - not_null
+          - unique
+
+
+  - name: dim_product
+    description: "Product dimension table"
+
+    columns:
+      - name: product_id
+        tests:
+          - not_null
+          - unique
+
+
+  # fact
+
+  - name: fct_orders
+    description: "Fact table with one row per order"
+
+    columns:
+      - name: order_id
+        tests:
+          - not_null
+          - unique
+
+      - name: customer_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_customer')
+              field: customer_id
+
+      - name: order_updated_at
+        tests:
+          - not_null
+
+
+  - name: fct_order_items
+    description: "Fact table with one row per order item"
+
+    columns:
+      - name: order_id
+        tests:
+          - not_null
+
+      - name: item_id
+        tests:
+          - not_null

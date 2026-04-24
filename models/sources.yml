@@ -1,0 +1,48 @@
+version: 2
+
+sources:
+  - name: raw
+    database: bts_db
+    schema: raw
+
+    tables:
+      - name: orders
+        description: "Raw orders data from MongoDB (JSON VARIANT)"
+
+        columns:
+          - name: doc
+            description: "Full JSON document for order"
+
+        loaded_at_field: doc:audit:updatedAt::timestamp
+
+        freshness:
+          warn_after: {count: 12, period: hour}
+          error_after: {count: 24, period: hour}
+
+
+      - name: customers
+        description: "Raw customers data from MongoDB"
+
+        columns:
+          - name: doc
+            description: "Full JSON document for customer"
+
+        loaded_at_field: doc:audit:updatedAt:"$date"::timestamp
+
+        freshness:
+          warn_after: {count: 24, period: hour}
+          error_after: {count: 48, period: hour}
+
+
+      - name: products
+        description: "Raw products data from MongoDB"
+
+        columns:
+          - name: doc
+            description: "Full JSON document for product"
+
+        loaded_at_field: doc:audit:updatedAt:"$date"::timestamp
+
+        freshness:
+          warn_after: {count: 24, period: hour}
+          error_after: {count: 72, period: hour}
