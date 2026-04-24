@@ -1,0 +1,225 @@
+[0m11:57:21.784352 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001658ED80EF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001658EA60EC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001658EA60950>]}
+
+
+============================== 11:57:21.802018 | eb04df86-78f4-4506-9192-d6da104c674e ==============================
+[0m11:57:21.802018 [info ] [MainThread]: Running with dbt=1.11.2
+[0m11:57:21.810099 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'D:\\bts\\bts', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt compile', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'D:\\bts\\bts\\logs'}
+[0m11:57:22.511479 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m11:57:22.511479 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m11:57:22.515580 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m11:57:22.707882 [warn ] [MainThread]: [[33mWARNING[0m][MissingPlusPrefixDeprecation]: Deprecated functionality
+Missing '+' prefix on `materialized` found at `bts.marts.materialized` in file
+`D:\bts\bts\dbt_project.yml`. Hierarchical config values without a '+' prefix
+are deprecated in dbt_project.yml.
+[0m11:57:22.707882 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'eb04df86-78f4-4506-9192-d6da104c674e', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001658FDC99D0>]}
+[0m11:57:23.492040 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'eb04df86-78f4-4506-9192-d6da104c674e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016590B44F80>]}
+[0m11:57:23.617519 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'eb04df86-78f4-4506-9192-d6da104c674e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016590B765A0>]}
+[0m11:57:23.617519 [info ] [MainThread]: Registered adapter: snowflake=1.11.1
+[0m11:57:24.018867 [debug] [MainThread]: checksum: 3d40d8bbe1bef07db1c24822f2dbfff8bc07f2a48ed4fe2658a40653aec0b54b, vars: {}, profile: , target: , version: 1.11.2
+[0m11:57:24.020875 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m11:57:24.020875 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'eb04df86-78f4-4506-9192-d6da104c674e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001658ED82B40>]}
+[0m11:57:24.110006 [warn ] [MainThread]: [[33mWARNING[0m][PropertyMovedToConfigDeprecation]: Deprecated functionality
+Found `freshness` as a top-level property of `sources[0].tables[0]` in file
+`models\sources.yml`. The `freshness` top-level property should be moved into
+the `config` of `sources[0].tables[0]`.
+[0m11:57:24.110006 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'eb04df86-78f4-4506-9192-d6da104c674e', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016590DD4C80>]}
+[0m11:57:30.206901 [warn ] [MainThread]: [[33mWARNING[0m][MissingArgumentsPropertyInGenericTestDeprecation]: Deprecated
+functionality
+Found top-level arguments to test `relationships` defined on 'fct_orders' in
+package 'bts' (models\schema.yml). Arguments to generic tests should be nested
+under the `arguments` property.
+[0m11:57:30.206901 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'eb04df86-78f4-4506-9192-d6da104c674e', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000165912F9430>]}
+[0m11:57:30.571703 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'eb04df86-78f4-4506-9192-d6da104c674e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000165924E3290>]}
+[0m11:57:30.868132 [debug] [MainThread]: Wrote artifact WritableManifest to D:\bts\bts\target\manifest.json
+[0m11:57:30.945615 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\bts\bts\target\semantic_manifest.json
+[0m11:57:31.064038 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'eb04df86-78f4-4506-9192-d6da104c674e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016591495C10>]}
+[0m11:57:31.064038 [info ] [MainThread]: Found 7 models, 18 data tests, 3 sources, 522 macros
+[0m11:57:31.064038 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'eb04df86-78f4-4506-9192-d6da104c674e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001658AF04200>]}
+[0m11:57:31.069634 [info ] [MainThread]: 
+[0m11:57:31.071592 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m11:57:31.072841 [info ] [MainThread]: 
+[0m11:57:31.072841 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m11:57:31.080542 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_bts_db_dev'
+[0m11:57:31.218998 [debug] [ThreadPool]: Using snowflake connection "list_bts_db_dev"
+[0m11:57:31.218998 [debug] [ThreadPool]: On list_bts_db_dev: show objects in bts_db.dev
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "bts", "target_name": "dev", "connection_name": "list_bts_db_dev"} */;
+[0m11:57:31.218998 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:57:32.650595 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 1.426 seconds
+[0m11:57:32.650595 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'eb04df86-78f4-4506-9192-d6da104c674e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000165913D68D0>]}
+[0m11:57:32.698215 [debug] [Thread-2 (]: Began running node model.bts.stg_customers
+[0m11:57:32.698215 [debug] [Thread-2 (]: Acquiring new snowflake connection 'model.bts.stg_customers'
+[0m11:57:32.698215 [debug] [Thread-2 (]: Began compiling node model.bts.stg_customers
+[0m11:57:32.698215 [debug] [Thread-3 (]: Began running node model.bts.stg_orders
+[0m11:57:32.714008 [debug] [Thread-4 (]: Began running node model.bts.stg_products
+[0m11:57:32.714008 [debug] [Thread-2 (]: Writing injected SQL for node "model.bts.stg_customers"
+[0m11:57:32.714008 [debug] [Thread-3 (]: Acquiring new snowflake connection 'model.bts.stg_orders'
+[0m11:57:32.714008 [debug] [Thread-4 (]: Acquiring new snowflake connection 'model.bts.stg_products'
+[0m11:57:32.714008 [debug] [Thread-3 (]: Began compiling node model.bts.stg_orders
+[0m11:57:32.714008 [debug] [Thread-4 (]: Began compiling node model.bts.stg_products
+[0m11:57:32.730059 [debug] [Thread-3 (]: Writing injected SQL for node "model.bts.stg_orders"
+[0m11:57:32.737109 [debug] [Thread-4 (]: Writing injected SQL for node "model.bts.stg_products"
+[0m11:57:32.743342 [debug] [Thread-4 (]: Began executing node model.bts.stg_products
+[0m11:57:32.745353 [debug] [Thread-4 (]: Finished running node model.bts.stg_products
+[0m11:57:32.747370 [debug] [Thread-5 (]: Began running node model.bts.dim_product
+[0m11:57:32.747370 [debug] [Thread-5 (]: Acquiring new snowflake connection 'model.bts.dim_product'
+[0m11:57:32.749384 [debug] [Thread-4 (]: Began running node test.bts.not_null_stg_products_product_id.6373b0acf3
+[0m11:57:32.749384 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly model.bts.stg_products, now test.bts.not_null_stg_products_product_id.6373b0acf3)
+[0m11:57:32.751291 [debug] [Thread-4 (]: Began compiling node test.bts.not_null_stg_products_product_id.6373b0acf3
+[0m11:57:32.749384 [debug] [Thread-5 (]: Began compiling node model.bts.dim_product
+[0m11:57:32.761077 [debug] [Thread-3 (]: Began executing node model.bts.stg_orders
+[0m11:57:32.761077 [debug] [Thread-2 (]: Began executing node model.bts.stg_customers
+[0m11:57:32.761077 [debug] [Thread-4 (]: Writing injected SQL for node "test.bts.not_null_stg_products_product_id.6373b0acf3"
+[0m11:57:32.761077 [debug] [Thread-5 (]: Writing injected SQL for node "model.bts.dim_product"
+[0m11:57:32.761077 [debug] [Thread-3 (]: Finished running node model.bts.stg_orders
+[0m11:57:32.761077 [debug] [Thread-2 (]: Finished running node model.bts.stg_customers
+[0m11:57:32.761077 [debug] [Thread-3 (]: Began running node test.bts.not_null_stg_products_product_name.0b59e4b939
+[0m11:57:32.761077 [debug] [Thread-2 (]: Began running node model.bts.fct_order_items
+[0m11:57:32.761077 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.bts.stg_orders, now test.bts.not_null_stg_products_product_name.0b59e4b939)
+[0m11:57:32.776826 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.bts.stg_customers, now model.bts.fct_order_items)
+[0m11:57:32.778048 [debug] [Thread-3 (]: Began compiling node test.bts.not_null_stg_products_product_name.0b59e4b939
+[0m11:57:32.778561 [debug] [Thread-2 (]: Began compiling node model.bts.fct_order_items
+[0m11:57:32.778561 [debug] [Thread-3 (]: Writing injected SQL for node "test.bts.not_null_stg_products_product_name.0b59e4b939"
+[0m11:57:32.778561 [debug] [Thread-5 (]: Began executing node model.bts.dim_product
+[0m11:57:32.778561 [debug] [Thread-2 (]: Writing injected SQL for node "model.bts.fct_order_items"
+[0m11:57:32.778561 [debug] [Thread-4 (]: Began executing node test.bts.not_null_stg_products_product_id.6373b0acf3
+[0m11:57:32.792756 [debug] [Thread-5 (]: Finished running node model.bts.dim_product
+[0m11:57:32.792756 [debug] [Thread-4 (]: Finished running node test.bts.not_null_stg_products_product_id.6373b0acf3
+[0m11:57:32.796059 [debug] [Thread-5 (]: Began running node model.bts.fct_orders
+[0m11:57:32.797348 [debug] [Thread-4 (]: Began running node test.bts.not_null_stg_orders_customer_id.af79d5e4b5
+[0m11:57:32.797348 [debug] [Thread-5 (]: Re-using an available connection from the pool (formerly model.bts.dim_product, now model.bts.fct_orders)
+[0m11:57:32.797348 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.bts.not_null_stg_products_product_id.6373b0acf3, now test.bts.not_null_stg_orders_customer_id.af79d5e4b5)
+[0m11:57:32.800938 [debug] [Thread-5 (]: Began compiling node model.bts.fct_orders
+[0m11:57:32.800938 [debug] [Thread-4 (]: Began compiling node test.bts.not_null_stg_orders_customer_id.af79d5e4b5
+[0m11:57:32.800938 [debug] [Thread-5 (]: Writing injected SQL for node "model.bts.fct_orders"
+[0m11:57:32.800938 [debug] [Thread-3 (]: Began executing node test.bts.not_null_stg_products_product_name.0b59e4b939
+[0m11:57:32.811682 [debug] [Thread-4 (]: Writing injected SQL for node "test.bts.not_null_stg_orders_customer_id.af79d5e4b5"
+[0m11:57:32.811682 [debug] [Thread-2 (]: Began executing node model.bts.fct_order_items
+[0m11:57:32.816521 [debug] [Thread-3 (]: Finished running node test.bts.not_null_stg_products_product_name.0b59e4b939
+[0m11:57:32.818355 [debug] [Thread-2 (]: Finished running node model.bts.fct_order_items
+[0m11:57:32.819462 [debug] [Thread-3 (]: Began running node test.bts.not_null_stg_orders_order_id.81cfe2fe64
+[0m11:57:32.819462 [debug] [Thread-2 (]: Began running node test.bts.not_null_stg_orders_order_updated_at.7fe234a024
+[0m11:57:32.821557 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.bts.not_null_stg_products_product_name.0b59e4b939, now test.bts.not_null_stg_orders_order_id.81cfe2fe64)
+[0m11:57:32.822740 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.bts.fct_order_items, now test.bts.not_null_stg_orders_order_updated_at.7fe234a024)
+[0m11:57:32.822740 [debug] [Thread-3 (]: Began compiling node test.bts.not_null_stg_orders_order_id.81cfe2fe64
+[0m11:57:32.825115 [debug] [Thread-2 (]: Began compiling node test.bts.not_null_stg_orders_order_updated_at.7fe234a024
+[0m11:57:32.831154 [debug] [Thread-3 (]: Writing injected SQL for node "test.bts.not_null_stg_orders_order_id.81cfe2fe64"
+[0m11:57:32.831154 [debug] [Thread-4 (]: Began executing node test.bts.not_null_stg_orders_customer_id.af79d5e4b5
+[0m11:57:32.833431 [debug] [Thread-5 (]: Began executing node model.bts.fct_orders
+[0m11:57:32.833431 [debug] [Thread-2 (]: Writing injected SQL for node "test.bts.not_null_stg_orders_order_updated_at.7fe234a024"
+[0m11:57:32.833431 [debug] [Thread-4 (]: Finished running node test.bts.not_null_stg_orders_customer_id.af79d5e4b5
+[0m11:57:32.841985 [debug] [Thread-5 (]: Finished running node model.bts.fct_orders
+[0m11:57:32.841985 [debug] [Thread-4 (]: Began running node model.bts.dim_customer
+[0m11:57:32.841985 [debug] [Thread-5 (]: Began running node test.bts.not_null_stg_customers_customer_id.e2cfb1f9aa
+[0m11:57:32.845968 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.bts.not_null_stg_orders_customer_id.af79d5e4b5, now model.bts.dim_customer)
+[0m11:57:32.845968 [debug] [Thread-5 (]: Re-using an available connection from the pool (formerly model.bts.fct_orders, now test.bts.not_null_stg_customers_customer_id.e2cfb1f9aa)
+[0m11:57:32.846975 [debug] [Thread-4 (]: Began compiling node model.bts.dim_customer
+[0m11:57:32.846975 [debug] [Thread-5 (]: Began compiling node test.bts.not_null_stg_customers_customer_id.e2cfb1f9aa
+[0m11:57:32.851886 [debug] [Thread-4 (]: Writing injected SQL for node "model.bts.dim_customer"
+[0m11:57:32.858086 [debug] [Thread-5 (]: Writing injected SQL for node "test.bts.not_null_stg_customers_customer_id.e2cfb1f9aa"
+[0m11:57:32.858086 [debug] [Thread-3 (]: Began executing node test.bts.not_null_stg_orders_order_id.81cfe2fe64
+[0m11:57:32.858086 [debug] [Thread-3 (]: Finished running node test.bts.not_null_stg_orders_order_id.81cfe2fe64
+[0m11:57:32.858086 [debug] [Thread-3 (]: Began running node test.bts.not_null_stg_customers_region.dead58c348
+[0m11:57:32.864394 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.bts.not_null_stg_orders_order_id.81cfe2fe64, now test.bts.not_null_stg_customers_region.dead58c348)
+[0m11:57:32.864394 [debug] [Thread-3 (]: Began compiling node test.bts.not_null_stg_customers_region.dead58c348
+[0m11:57:32.867803 [debug] [Thread-3 (]: Writing injected SQL for node "test.bts.not_null_stg_customers_region.dead58c348"
+[0m11:57:32.867803 [debug] [Thread-4 (]: Began executing node model.bts.dim_customer
+[0m11:57:32.867803 [debug] [Thread-4 (]: Finished running node model.bts.dim_customer
+[0m11:57:32.867803 [debug] [Thread-4 (]: Began running node test.bts.not_null_dim_product_product_id.02b1f06816
+[0m11:57:32.867803 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly model.bts.dim_customer, now test.bts.not_null_dim_product_product_id.02b1f06816)
+[0m11:57:32.867803 [debug] [Thread-4 (]: Began compiling node test.bts.not_null_dim_product_product_id.02b1f06816
+[0m11:57:32.867803 [debug] [Thread-4 (]: Writing injected SQL for node "test.bts.not_null_dim_product_product_id.02b1f06816"
+[0m11:57:32.886630 [debug] [Thread-3 (]: Began executing node test.bts.not_null_stg_customers_region.dead58c348
+[0m11:57:32.886630 [debug] [Thread-2 (]: Began executing node test.bts.not_null_stg_orders_order_updated_at.7fe234a024
+[0m11:57:32.886630 [debug] [Thread-4 (]: Began executing node test.bts.not_null_dim_product_product_id.02b1f06816
+[0m11:57:32.889073 [debug] [Thread-3 (]: Finished running node test.bts.not_null_stg_customers_region.dead58c348
+[0m11:57:32.889969 [debug] [Thread-5 (]: Began executing node test.bts.not_null_stg_customers_customer_id.e2cfb1f9aa
+[0m11:57:32.890526 [debug] [Thread-2 (]: Finished running node test.bts.not_null_stg_orders_order_updated_at.7fe234a024
+[0m11:57:32.891567 [debug] [Thread-4 (]: Finished running node test.bts.not_null_dim_product_product_id.02b1f06816
+[0m11:57:32.891567 [debug] [Thread-3 (]: Began running node test.bts.unique_dim_product_product_id.46495bf7fe
+[0m11:57:32.891567 [debug] [Thread-5 (]: Finished running node test.bts.not_null_stg_customers_customer_id.e2cfb1f9aa
+[0m11:57:32.891567 [debug] [Thread-2 (]: Began running node test.bts.not_null_fct_order_items_item_id.13314caffa
+[0m11:57:32.891567 [debug] [Thread-4 (]: Began running node test.bts.not_null_fct_order_items_order_id.e887a2de02
+[0m11:57:32.891567 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.bts.not_null_stg_customers_region.dead58c348, now test.bts.unique_dim_product_product_id.46495bf7fe)
+[0m11:57:32.891567 [debug] [Thread-5 (]: Began running node test.bts.not_null_fct_orders_customer_id.16fe324f7b
+[0m11:57:32.891567 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.bts.not_null_stg_orders_order_updated_at.7fe234a024, now test.bts.not_null_fct_order_items_item_id.13314caffa)
+[0m11:57:32.891567 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.bts.not_null_dim_product_product_id.02b1f06816, now test.bts.not_null_fct_order_items_order_id.e887a2de02)
+[0m11:57:32.898357 [debug] [Thread-3 (]: Began compiling node test.bts.unique_dim_product_product_id.46495bf7fe
+[0m11:57:32.898357 [debug] [Thread-5 (]: Re-using an available connection from the pool (formerly test.bts.not_null_stg_customers_customer_id.e2cfb1f9aa, now test.bts.not_null_fct_orders_customer_id.16fe324f7b)
+[0m11:57:32.898357 [debug] [Thread-2 (]: Began compiling node test.bts.not_null_fct_order_items_item_id.13314caffa
+[0m11:57:32.898357 [debug] [Thread-4 (]: Began compiling node test.bts.not_null_fct_order_items_order_id.e887a2de02
+[0m11:57:32.900793 [debug] [Thread-3 (]: Writing injected SQL for node "test.bts.unique_dim_product_product_id.46495bf7fe"
+[0m11:57:32.900793 [debug] [Thread-5 (]: Began compiling node test.bts.not_null_fct_orders_customer_id.16fe324f7b
+[0m11:57:32.913710 [debug] [Thread-2 (]: Writing injected SQL for node "test.bts.not_null_fct_order_items_item_id.13314caffa"
+[0m11:57:32.913710 [debug] [Thread-4 (]: Writing injected SQL for node "test.bts.not_null_fct_order_items_order_id.e887a2de02"
+[0m11:57:32.913710 [debug] [Thread-5 (]: Writing injected SQL for node "test.bts.not_null_fct_orders_customer_id.16fe324f7b"
+[0m11:57:32.929532 [debug] [Thread-3 (]: Began executing node test.bts.unique_dim_product_product_id.46495bf7fe
+[0m11:57:32.929532 [debug] [Thread-5 (]: Began executing node test.bts.not_null_fct_orders_customer_id.16fe324f7b
+[0m11:57:32.929532 [debug] [Thread-3 (]: Finished running node test.bts.unique_dim_product_product_id.46495bf7fe
+[0m11:57:32.929532 [debug] [Thread-4 (]: Began executing node test.bts.not_null_fct_order_items_order_id.e887a2de02
+[0m11:57:32.929532 [debug] [Thread-2 (]: Began executing node test.bts.not_null_fct_order_items_item_id.13314caffa
+[0m11:57:32.929532 [debug] [Thread-5 (]: Finished running node test.bts.not_null_fct_orders_customer_id.16fe324f7b
+[0m11:57:32.929532 [debug] [Thread-3 (]: Began running node test.bts.not_null_fct_orders_order_id.4e687af8d0
+[0m11:57:32.929532 [debug] [Thread-4 (]: Finished running node test.bts.not_null_fct_order_items_order_id.e887a2de02
+[0m11:57:32.929532 [debug] [Thread-2 (]: Finished running node test.bts.not_null_fct_order_items_item_id.13314caffa
+[0m11:57:32.929532 [debug] [Thread-5 (]: Began running node test.bts.not_null_fct_orders_order_updated_at.c4d524204d
+[0m11:57:32.929532 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.bts.unique_dim_product_product_id.46495bf7fe, now test.bts.not_null_fct_orders_order_id.4e687af8d0)
+[0m11:57:32.929532 [debug] [Thread-4 (]: Began running node test.bts.unique_fct_orders_order_id.523ddb6ce5
+[0m11:57:32.929532 [debug] [Thread-2 (]: Began running node test.bts.not_null_dim_customer_customer_id.9775012dfc
+[0m11:57:32.929532 [debug] [Thread-5 (]: Re-using an available connection from the pool (formerly test.bts.not_null_fct_orders_customer_id.16fe324f7b, now test.bts.not_null_fct_orders_order_updated_at.c4d524204d)
+[0m11:57:32.929532 [debug] [Thread-3 (]: Began compiling node test.bts.not_null_fct_orders_order_id.4e687af8d0
+[0m11:57:32.929532 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.bts.not_null_fct_order_items_order_id.e887a2de02, now test.bts.unique_fct_orders_order_id.523ddb6ce5)
+[0m11:57:32.929532 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.bts.not_null_fct_order_items_item_id.13314caffa, now test.bts.not_null_dim_customer_customer_id.9775012dfc)
+[0m11:57:32.945582 [debug] [Thread-5 (]: Began compiling node test.bts.not_null_fct_orders_order_updated_at.c4d524204d
+[0m11:57:32.945582 [debug] [Thread-3 (]: Writing injected SQL for node "test.bts.not_null_fct_orders_order_id.4e687af8d0"
+[0m11:57:32.945582 [debug] [Thread-4 (]: Began compiling node test.bts.unique_fct_orders_order_id.523ddb6ce5
+[0m11:57:32.945582 [debug] [Thread-2 (]: Began compiling node test.bts.not_null_dim_customer_customer_id.9775012dfc
+[0m11:57:32.945582 [debug] [Thread-5 (]: Writing injected SQL for node "test.bts.not_null_fct_orders_order_updated_at.c4d524204d"
+[0m11:57:32.961762 [debug] [Thread-4 (]: Writing injected SQL for node "test.bts.unique_fct_orders_order_id.523ddb6ce5"
+[0m11:57:32.970069 [debug] [Thread-2 (]: Writing injected SQL for node "test.bts.not_null_dim_customer_customer_id.9775012dfc"
+[0m11:57:32.975784 [debug] [Thread-3 (]: Began executing node test.bts.not_null_fct_orders_order_id.4e687af8d0
+[0m11:57:32.977539 [debug] [Thread-2 (]: Began executing node test.bts.not_null_dim_customer_customer_id.9775012dfc
+[0m11:57:32.978821 [debug] [Thread-4 (]: Began executing node test.bts.unique_fct_orders_order_id.523ddb6ce5
+[0m11:57:32.978821 [debug] [Thread-5 (]: Began executing node test.bts.not_null_fct_orders_order_updated_at.c4d524204d
+[0m11:57:32.993764 [debug] [Thread-3 (]: Finished running node test.bts.not_null_fct_orders_order_id.4e687af8d0
+[0m11:57:32.993764 [debug] [Thread-2 (]: Finished running node test.bts.not_null_dim_customer_customer_id.9775012dfc
+[0m11:57:32.993764 [debug] [Thread-4 (]: Finished running node test.bts.unique_fct_orders_order_id.523ddb6ce5
+[0m11:57:32.993764 [debug] [Thread-5 (]: Finished running node test.bts.not_null_fct_orders_order_updated_at.c4d524204d
+[0m11:57:32.993764 [debug] [Thread-3 (]: Began running node test.bts.relationships_fct_orders_customer_id__customer_id__ref_dim_customer_.d39c4721da
+[0m11:57:32.993764 [debug] [Thread-2 (]: Began running node test.bts.unique_dim_customer_customer_id.b42affccd1
+[0m11:57:32.993764 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.bts.not_null_fct_orders_order_id.4e687af8d0, now test.bts.relationships_fct_orders_customer_id__customer_id__ref_dim_customer_.d39c4721da)
+[0m11:57:32.993764 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.bts.not_null_dim_customer_customer_id.9775012dfc, now test.bts.unique_dim_customer_customer_id.b42affccd1)
+[0m11:57:32.993764 [debug] [Thread-3 (]: Began compiling node test.bts.relationships_fct_orders_customer_id__customer_id__ref_dim_customer_.d39c4721da
+[0m11:57:32.993764 [debug] [Thread-2 (]: Began compiling node test.bts.unique_dim_customer_customer_id.b42affccd1
+[0m11:57:33.014001 [debug] [Thread-3 (]: Writing injected SQL for node "test.bts.relationships_fct_orders_customer_id__customer_id__ref_dim_customer_.d39c4721da"
+[0m11:57:33.021021 [debug] [Thread-2 (]: Writing injected SQL for node "test.bts.unique_dim_customer_customer_id.b42affccd1"
+[0m11:57:33.025590 [debug] [Thread-3 (]: Began executing node test.bts.relationships_fct_orders_customer_id__customer_id__ref_dim_customer_.d39c4721da
+[0m11:57:33.025590 [debug] [Thread-2 (]: Began executing node test.bts.unique_dim_customer_customer_id.b42affccd1
+[0m11:57:33.025590 [debug] [Thread-3 (]: Finished running node test.bts.relationships_fct_orders_customer_id__customer_id__ref_dim_customer_.d39c4721da
+[0m11:57:33.032146 [debug] [Thread-2 (]: Finished running node test.bts.unique_dim_customer_customer_id.b42affccd1
+[0m11:57:33.032146 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m11:57:33.032146 [debug] [MainThread]: Connection 'list_bts_db_dev' was left open.
+[0m11:57:33.032146 [debug] [MainThread]: On list_bts_db_dev: Close
+[0m11:57:33.255579 [debug] [MainThread]: Connection 'test.bts.unique_dim_customer_customer_id.b42affccd1' was properly closed.
+[0m11:57:33.255579 [debug] [MainThread]: Connection 'test.bts.relationships_fct_orders_customer_id__customer_id__ref_dim_customer_.d39c4721da' was properly closed.
+[0m11:57:33.257603 [debug] [MainThread]: Connection 'test.bts.unique_fct_orders_order_id.523ddb6ce5' was properly closed.
+[0m11:57:33.259628 [debug] [MainThread]: Connection 'test.bts.not_null_fct_orders_order_updated_at.c4d524204d' was properly closed.
+[0m11:57:33.274036 [debug] [MainThread]: Command end result
+[0m11:57:33.384683 [debug] [MainThread]: Wrote artifact WritableManifest to D:\bts\bts\target\manifest.json
+[0m11:57:33.410514 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\bts\bts\target\semantic_manifest.json
+[0m11:57:33.432765 [debug] [MainThread]: Wrote artifact RunExecutionResult to D:\bts\bts\target\run_results.json
+[0m11:57:33.433389 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- MissingPlusPrefixDeprecation: 2 occurrences
+- PropertyMovedToConfigDeprecation: 6 occurrences
+- MissingArgumentsPropertyInGenericTestDeprecation: 1 occurrence
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m11:57:33.433389 [debug] [MainThread]: Command `dbt compile` succeeded at 11:57:33.433389 after 11.90 seconds
+[0m11:57:33.433389 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016590FEED20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001658E4EEC30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016590DB60C0>]}
+[0m11:57:33.433389 [debug] [MainThread]: Flushing usage events
+[0m11:57:34.822902 [debug] [MainThread]: An error was encountered while trying to flush usage events
