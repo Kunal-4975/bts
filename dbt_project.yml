@@ -1,0 +1,18 @@
+name: 'bts'
+version: '1.0.0'
+
+profile: 'bts'
+
+model-paths: ["models"]
+
+clean-targets:         # directories to be removed by `dbt clean`
+  - "target"
+  - "dbt_packages"
+
+
+models:
+  bts:
+    staging:
+      materialized: view
+    marts:
+      materialized: table

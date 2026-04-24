@@ -1,0 +1,15 @@
+bts:
+  target: dev
+  outputs:
+    
+    dev:
+      type: snowflake
+      account: gquapwi-du30730
+      user: bts_user
+      password: "@Access125497549"
+      role: transform            
+      database: bts_db           
+      warehouse: bts_wh          
+      schema: dev                
+      threads: 4
+      client_session_keep_alive: false
