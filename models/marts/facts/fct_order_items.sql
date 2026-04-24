@@ -11,4 +11,3 @@ select
     line_gross - line_discount as line_net
 from {{ ref('stg_orders') }} o,
 lateral flatten(input => parse_json(o.order_items)) i
-;
