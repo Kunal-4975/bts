@@ -8,4 +8,3 @@ select
     to_timestamp(doc:audit:updatedAt:"$date"::STRING) AS customer_updated_at,
     doc:isDeleted::boolean as is_deleted
 from {{ source('raw', 'customers') }}
-;
