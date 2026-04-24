@@ -8,4 +8,3 @@ select
     case when loyalty_tier = 'Gold' then 'VIP' else 'Standard' end as customer_segment
 from {{ ref('stg_customers') }}
 where is_deleted = false
-;
