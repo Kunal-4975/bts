@@ -7,4 +7,3 @@ select
     doc:active::boolean as is_active,
     to_timestamp(doc:audit:updatedAt:"$date"::STRING) AS product_updated_at
 from {{ source('raw', 'products') }}
-;
