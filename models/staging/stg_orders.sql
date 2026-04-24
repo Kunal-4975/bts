@@ -9,4 +9,3 @@ select
 	doc:isDeleted::boolean as is_deleted
 from {{ source('raw', 'orders') }}
 where doc:orderId is not null
-;
