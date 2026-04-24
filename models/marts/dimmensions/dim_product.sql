@@ -6,4 +6,3 @@ select distinct
     category_l2,
     is_active
 from {{ ref('stg_products') }}
-;
