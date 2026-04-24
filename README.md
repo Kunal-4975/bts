@@ -1,12 +1,5 @@
 # Data Engineer Technical Assessment — dbt + Snowflake
 
-**Candidate:** Kunal Bhor
-**Repository:** [github.com/Kunal-4975/bts](https://github.com/Kunal-4975/bts)
-**Assessment:** QuantumBlack — Data Engineer Technical Assessment (dbt & Snowflake)
-**Interviewers:** Gunjan Dadhich, Nikhil Mishra
-
----
-
 ## 1. Overview
 
 This repository is my submission for the Data Engineer technical assessment. The objective of the exercise is to transform operational data that originates in MongoDB (as nested JSON) and lands in Snowflake as `VARIANT` raw tables into analytics-ready fact and dimension tables using **dbt**, so that the data can be consumed in **Power BI**.
